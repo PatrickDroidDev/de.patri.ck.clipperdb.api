@@ -1,7 +1,7 @@
 # ClipperDB REST API
 REST API zum abfragen der Clipper Daten...
 
-==========================================
+=====================================
 
 # Letzte 104 Items:
 http://beispielhost.com/api/last/
