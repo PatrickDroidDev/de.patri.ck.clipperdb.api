@@ -1,0 +1,6 @@
+Options +Indexes +FollowSymlinks
+ 
+Header set Access-Control-Allow-Origin "*"
+RewriteEngine On
+RewriteRule ^(.[a-z]*)(|/)$ ?data=$1 [QSA,NC,L]
+RewriteRule ^(.[a-z]*)/(.[0-9]*)(|/)$ ?data=$1&id=$2 [QSA,NC,L]
