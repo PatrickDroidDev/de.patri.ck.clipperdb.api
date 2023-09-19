@@ -1,22 +1,14 @@
-# ClipperDB REST API
-REST API zum abfragen der Clipper Daten...
+  # ClipperDB REST API
+ ==============================================================================   
+   => Letzte {anz} Einträge:   http://api.example.host/clipper/last/{anz}/    
+   => Alle Sets:               http://api.example.host/clipper/sets/    
+   => Alle Items:              http://api.example.host/clipper/items/   
+   => Alle Items aus Set:      http://api.example.host/clipper/sets/{set_id}/
+   => Alle fehlenden Items:    http://api.example.host/clipper/miss/
+   => Statistik:               http://api.example.host/clipper/stats/
 
-=====================================
 
-# Letzte 104 Items:
-http://beispielhost.com/api/last/
-
-# Alle Items:
-http://beispielhost.com/api/items/
-
-# Alle Sets:
-http://beispielhost.com/api/sets/
-
-# Item [id] Details:
-http://beispielhost.com/api/item/[item_id]/
-
-# Set [id] Details:
-http://beispielhost.com/api/set/[set_id]/
-
-# Statistik:
-http://beispielhost.com/api/stats/
+  # AudioDB REST API
+ ==============================================================================   
+   => Alle Einträge:            http://api.example.host/platten/   
+   => Eintrag Details:          http://api.example.host/platten/{track_id}/
