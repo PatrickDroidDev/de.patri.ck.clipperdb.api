@@ -1,0 +1,7 @@
+Options +Indexes +FollowSymlinks
+AddDefaultCharset UTF-8
+Header set Access-Control-Allow-Origin "*"
+
+RewriteEngine On
+RewriteRule ^(|/)$ ?data=audio [QSA,NC,L]
+RewriteRule ^(.[0-9]*)(|/)$ ?data=audio&id=$1 [QSA,NC,L]
