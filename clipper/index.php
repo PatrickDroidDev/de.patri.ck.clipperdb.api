@@ -21,14 +21,14 @@
 
       case "last":
 	      if(isset($_ID) && !empty($_ID)) { $limit = $_ID; } else { $limit = "104"; }	  
-        $SQL = "SELECT * FROM ".TBL_ITEMS." WHERE own='1' ORDER BY item_id DESC LIMIT ".$limit;
+        $SQL = "SELECT * FROM ".TBL_ITEMS." WHERE own='1' ORDER BY _id DESC LIMIT ".$limit;
       break;
 	  
       case "items": $SQL = "SELECT * FROM ".TBL_ITEMS." WHERE own='1' ORDER BY image, name ASC";   break;
       
       case "sets":
 	      if(isset($_ID) && !empty($_ID)) {
-		      $SQL = "SELECT cs.set_id AS set_id, cs.name AS set_name, cs.own AS set_own, ci.item_id AS item_id, ci.name AS name, ci.image AS image, ci.own AS own, ci.tag_id AS tag_id, ci.datum AS datum, ci.modified AS modified FROM ".TBL_SETS." cs JOIN ".TBL_ITEMS." ci ON cs.set_id = ci.set_id WHERE ci.set_id='".$_ID."' ORDER BY cs.name, ci.name ASC;";
+		      $SQL = "SELECT cs._id AS set_id, cs.name AS set_name, cs.own AS set_own, ci._id AS item_id, ci.name AS name, ci.image AS image, ci.own AS own, ci.tag_id AS tag_id, ci.datum AS datum, ci.modified AS modified FROM ".TBL_SETS." cs JOIN ".TBL_ITEMS." ci ON cs._id = ci.set_id WHERE ci.set_id='".$_ID."' ORDER BY cs.name, ci.name ASC;";
         } else {
           $SQL = "SELECT * FROM ".TBL_SETS." ORDER BY image, name ASC";
         }
